@@ -1,0 +1,449 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "multivitamin_hero": {
+      "type": "multivitamin-hero",
+      "settings": {
+        "eyebrow": "ADVANCED MULTIVITAMIN FOR ADULTS",
+        "heading": "Healthier body and mind with multivitamin",
+        "description": "<p>Take control of your health with plant-based ingredients & protein.</p>",
+        "primary_button_label": "SHOP VITAMIN",
+        "primary_button_link": "shopify://collections/all",
+        "image": "shopify://shop_images/multivitamin_hero.png",
+        "background_color": "#f9f8f3"
+      }
+    },
+    "logo_marquee": {
+      "type": "logo-marquee",
+      "blocks": {
+        "logo_1": {
+          "type": "logo",
+          "settings": {
+            "link": "",
+            "fallback_url": "brand_logos_strip.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_1"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "padding_y": 30,
+        "speed": 35,
+        "logo_height": 45
+      }
+    },
+    "multivitamin_features": {
+      "type": "multivitamin-features",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "svg_filename": "flower2.svg",
+            "text": "No Artificial Flavors",
+            "description": "Write something useful to describe this section."
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "svg_filename": "noise-reduction.svg",
+            "text": "No Synthetic Dyes",
+            "description": "Write something useful to describe this section."
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "svg_filename": "flower1.svg",
+            "text": "Gluten Free & Dairy Free",
+            "description": "Write something useful to describe this section."
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "svg_filename": "brightness-low.svg",
+            "text": "High protein & low sugar",
+            "description": "Write something useful to describe this section."
+          }
+        },
+        "feature_5": {
+          "type": "feature",
+          "settings": {
+            "svg_filename": "moisture.svg",
+            "text": "Non-GMO",
+            "description": "Write something useful to describe this section."
+          }
+        },
+        "feature_6": {
+          "type": "feature",
+          "settings": {
+            "svg_filename": "shadows.svg",
+            "text": "Third Party Tested",
+            "description": "Write something useful to describe this section."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4",
+        "feature_5",
+        "feature_6"
+      ],
+      "settings": {
+        "tagline": "QUALITY INGREDIENTS",
+        "title": "Inside the Multivitamin",
+        "bg_color": "rgba(0,0,0,0)",
+        "card_bg": "#f8f8f8"
+      }
+    },
+    "multivitamin_benefits": {
+      "type": "multivitamin-benefits",
+      "blocks": {
+        "benefit_1": {
+          "type": "benefit",
+          "settings": {
+            "icon_name": "x-diamond.svg",
+            "fallback_icon_url": "",
+            "text": "Made in Canada"
+          }
+        },
+        "benefit_2": {
+          "type": "benefit",
+          "settings": {
+            "icon_name": "wind.svg",
+            "fallback_icon_url": "",
+            "text": "Vegan-friendly"
+          }
+        },
+        "benefit_3": {
+          "type": "benefit",
+          "settings": {
+            "icon_name": "toggle-off.svg",
+            "fallback_icon_url": "",
+            "text": "Easy and comfortable to swallow"
+          }
+        },
+        "benefit_4": {
+          "type": "benefit",
+          "settings": {
+            "icon_name": "check2-circle.svg",
+            "fallback_icon_url": "",
+            "text": "Carefully sourced and high quality components"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "benefit_4"
+      ],
+      "settings": {
+        "bg_color": "#f9f8f6",
+        "tagline": "OUR DIFFERENCE",
+        "heading": "Benefits for your long term health",
+        "description": "<p>Multivitamins, proteins, and more are all designed to transform your health.</p>",
+        "image": "shopify://shop_images/multivitamin_feature.jpg",
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/all"
+      }
+    },
+    "multivitamin_trust": {
+      "type": "multivitamin-trust",
+      "blocks": {
+        "expert_1": {
+          "type": "expert",
+          "settings": {
+            "avatar_filename": "ecb-avatar2.png",
+            "review_text": "Each ingredient has been well tested and demonstrated its worth at the dose that's in there.",
+            "author_name": "Dr Michael",
+            "author_title": "Chief Science Officer"
+          }
+        },
+        "expert_2": {
+          "type": "expert",
+          "settings": {
+            "avatar_filename": "ecb-avatar3.png",
+            "review_text": "I am so impressed with the Multivitamin. I am not surprised everyone wants one when the results are so powerful.",
+            "author_name": "George Smith",
+            "author_title": "Science Officer"
+          }
+        },
+        "expert_3": {
+          "type": "expert",
+          "settings": {
+            "avatar_filename": "ecb-avatar1.png",
+            "review_text": "Multivitamin is the most advanced and effective supplement I've taken.",
+            "author_name": "Dr Chris Nola",
+            "author_title": "Head of Nutrition Inc"
+          }
+        },
+        "expert_4": {
+          "type": "expert",
+          "settings": {
+            "avatar_filename": "ecb-avatar2.png",
+            "review_text": "Each ingredient has been well tested and demonstrated its worth at the dose that's in there.",
+            "author_name": "Dr Michael",
+            "author_title": "Chief Science Officer"
+          }
+        }
+      },
+      "block_order": [
+        "expert_1",
+        "expert_2",
+        "expert_3",
+        "expert_4"
+      ],
+      "settings": {
+        "bg_color": "#efdfca",
+        "tagline": "INDUSTRY REVIEWS",
+        "heading": "Trust by experts and doctors"
+      }
+    },
+    "multivitamin_comparison": {
+      "type": "multivitamin-comparison",
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "attribute": "Protein",
+            "our_value": "12-14g",
+            "competitor_value": "2-4g"
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "attribute": "Sugar",
+            "our_value": "0g",
+            "competitor_value": "2g"
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "attribute": "Net Carbs",
+            "our_value": "6-8g",
+            "competitor_value": "6-8g"
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "attribute": "High Fibre",
+            "our_value": "check",
+            "competitor_value": "check"
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "attribute": "Grain Free",
+            "our_value": "check",
+            "competitor_value": "cross"
+          }
+        },
+        "row_6": {
+          "type": "row",
+          "settings": {
+            "attribute": "Gluten Free",
+            "our_value": "check",
+            "competitor_value": "cross"
+          }
+        },
+        "row_7": {
+          "type": "row",
+          "settings": {
+            "attribute": "Vegan",
+            "our_value": "check",
+            "competitor_value": "cross"
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6",
+        "row_7"
+      ],
+      "settings": {
+        "tagline": "GOOD HEALTH MADE EASY",
+        "heading": "How Multivitamin Compares",
+        "bg_color": "#ffffff"
+      }
+    },
+    "multivitamin_buy": {
+      "type": "multivitamin-featured-buy",
+      "settings": {
+        "product": "",
+        "image": "shopify://shop_images/multivitamin.jpg",
+        "tagline": "EASY CONTENT BUILDER DEMO",
+        "title": "Multivitamin",
+        "price": "$199.00 USD",
+        "description": "<p>A unique blend of ingredients that support your long-term health and wellness.</p>",
+        "guarantee_text": "30-DAY MONEY BACK GUARANTEE",
+        "shipping_text": "FREE SHIPPING ON ORDERS OVER $99"
+      }
+    },
+    "multivitamin_faq": {
+      "type": "multivitamin-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the best multivitamins for my health?",
+            "answer": "<p>Donec mattis erat tellus. Pellentesque ac urna vitae risus tincidunt aliquet at at erat. Donec pretium sodales ipsum, sit amet commodo lacus viverra ac.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I know if I need to take multivitamin supplement?",
+            "answer": "<p>Donec mattis erat tellus. Pellentesque ac urna vitae risus tincidunt aliquet at at erat. Donec pretium sodales ipsum, sit amet commodo lacus viverra ac.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Fresh vitamin everyday",
+            "answer": "<p>Donec mattis erat tellus. Pellentesque ac urna vitae risus tincidunt aliquet at at erat. Donec pretium sodales ipsum, sit amet commodo lacus viverra ac.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Multivitamin components are carefully sourced and high quality",
+            "answer": "<p>Donec mattis erat tellus. Pellentesque ac urna vitae risus tincidunt aliquet at at erat. Donec pretium sodales ipsum, sit amet commodo lacus viverra ac.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are multivitamin safe for me to use?",
+            "answer": "<p>Donec mattis erat tellus. Pellentesque ac urna vitae risus tincidunt aliquet at at erat. Donec pretium sodales ipsum, sit amet commodo lacus viverra ac.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "subheading": "Answered by Doctors and Scientists",
+        "bg_color": "#f7f8f9"
+      }
+    },
+    "multivitamin_community": {
+      "type": "multivitamin-community",
+      "blocks": {
+        "video_1": {
+          "type": "video_item",
+          "settings": {
+            "video_url": ""
+          }
+        },
+        "video_2": {
+          "type": "video_item",
+          "settings": {
+            "video_url": ""
+          }
+        },
+        "video_3": {
+          "type": "video_item",
+          "settings": {
+            "video_url": ""
+          }
+        },
+        "video_4": {
+          "type": "video_item",
+          "settings": {
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_1",
+        "video_2",
+        "video_3",
+        "video_4"
+      ],
+      "settings": {
+        "heading": "Join our community...",
+        "bg_color": "#e6eef2"
+      }
+    },
+    "multivitamin_blogs": {
+      "type": "multivitamin-blog-grid",
+      "blocks": {
+        "post_1": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/multivitamin_blog1.jpg",
+            "title": "Benefit to Multivitamins",
+            "excerpt": "Pair large text with an image.",
+            "link": ""
+          }
+        },
+        "post_2": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/multivitamin_blog2.jpg",
+            "title": "Vitamin & Mineral Supplements",
+            "excerpt": "Pair large text with an image.",
+            "link": ""
+          }
+        },
+        "post_3": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/multivitamin_blog3.jpg",
+            "title": "Here's why I Take A Multivitamin",
+            "excerpt": "Pair large text with an image.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_1",
+        "post_2",
+        "post_3"
+      ],
+      "settings": {
+        "heading": "Blogs & expert advice",
+        "bg_color": "#efdfca"
+      }
+    }
+  },
+  "order": [
+    "multivitamin_hero",
+    "logo_marquee",
+    "multivitamin_features",
+    "multivitamin_benefits",
+    "multivitamin_trust",
+    "multivitamin_comparison",
+    "multivitamin_buy",
+    "multivitamin_faq",
+    "multivitamin_community",
+    "multivitamin_blogs"
+  ]
+}

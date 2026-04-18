@@ -1,0 +1,1 @@
+/Users/macbook/Desktop/shopify-development/my-custom-theme/AGENTS.md

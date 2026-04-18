@@ -1,0 +1,239 @@
+{% schema %}
+{
+  "name": "Community Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Join our community..."
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#E1EFF6"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video_item",
+      "name": "Community Item",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image (if no video)"
+        },
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "label": "Video URL",
+          "accept": ["youtube", "vimeo"]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Community Grid",
+      "blocks": [
+        { "type": "video_item" },
+        { "type": "video_item" },
+        { "type": "video_item" },
+        { "type": "video_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="ecb-community-section" style="background-color: {{ section.settings.bg_color }}; padding: 120px 0;">
+  <div class="page-width">
+    
+    <div class="community-header">
+      {% if section.settings.heading != blank %}
+        <h2 class="community-title">{{ section.settings.heading }}</h2>
+      {% endif %}
+    </div>
+
+    <div class="community-grid">
+      {% for block in section.blocks %}
+        <div class="community-item" {{ block.shopify_attributes }}>
+          <div class="video-card">
+            
+            {% if block.settings.video_url != blank %}
+              <div class="video-wrapper">
+                {% if block.settings.video_url.type == 'youtube' %}
+                  <iframe src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?autoplay=0&controls=1&rel=0&modestbranding=1" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                {% else %}
+                  <iframe src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}?autoplay=0&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                {% endif %}
+              </div>
+            {% else %}
+              <div class="thumbnail-wrapper">
+                {% if block.settings.image != blank %}
+                  {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+                {% else %}
+                  <img src="https://shopify.com/cdn/shop/files/share-your-brand-story.jpg" alt="Video Placeholder" width="600" height="338" loading="lazy">
+                {% endif %}
+                
+                <div class="play-overlay">
+                  <div class="play-button">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+                  </div>
+                </div>
+
+                <div class="thumbnail-info">
+                  <div class="brand-logo">
+                    <img src="https://shopify.com/cdn/shop/files/shopify-logo.png" alt="Shopify" width="32" height="32">
+                  </div>
+                  <div class="brand-text">
+                    <span class="main-text">Share your brand story</span>
+                    <span class="sub-text">Shopify</span>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .ecb-community-section {
+    width: 100%;
+    overflow: hidden;
+  }
+  .ecb-community-section .community-header {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  .ecb-community-section .community-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1A1A1A;
+    margin: 0;
+    letter-spacing: -0.2px;
+  }
+
+  .ecb-community-section .community-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .ecb-community-section .community-item {
+    flex: 0 0 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+  }
+
+  .ecb-community-section .video-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  .ecb-community-section .video-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .ecb-community-section .video-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ecb-community-section .thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  .ecb-community-section .thumbnail-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ecb-community-section .play-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ecb-community-section .play-button {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 0, 0, 0.9);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform 0.2s ease;
+  }
+  .ecb-community-section .thumbnail-wrapper:hover .play-button {
+    transform: scale(1.1);
+  }
+
+  .ecb-community-section .thumbnail-info {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+  .ecb-community-section .brand-logo {
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+  }
+  .ecb-community-section .brand-logo img {
+    width: 100%;
+    height: auto;
+  }
+  .ecb-community-section .brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .ecb-community-section .main-text {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .ecb-community-section .sub-text {
+    font-size: 12px;
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 959px) {
+    .ecb-community-section .community-item {
+      flex: 0 0 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+  }
+  @media screen and (max-width: 599px) {
+    .ecb-community-section .community-item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+</style>

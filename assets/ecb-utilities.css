@@ -1,0 +1,128 @@
+/* ECB Utility Classes Extracted from Demo */
+
+:root {
+  --peeper-purple: #5d2de6;
+  --peeper-green: #05381a;
+}
+
+/* Layout */
+.w-full { width: 100%; }
+.w-1\/2 { width: 50%; }
+.h-full { height: 100%; }
+.max-w-xl { max-width: 36rem; }
+.max-w-7xl { max-width: 80rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Display */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.grid { display: grid; }
+.inline-block { display: inline-block; }
+.hidden { display: none; }
+
+/* Align & Justify */
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+
+/* Grids */
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (min-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Gaps */
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.gap-10 { gap: 2.5rem; }
+
+/* Spacing */
+.m-0 { margin: 0; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-10 { margin-top: 2.5rem; }
+.mt-12 { margin-top: 3rem; }
+.mt-16 { margin-top: 4rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-10 { margin-bottom: 2.5rem; }
+
+.p-0 { padding: 0; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+/* Typography */
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-5xl { font-size: 3rem; }
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.text-center { text-align: center; }
+.uppercase { text-transform: uppercase; }
+
+/* Colors */
+.text-white { color: #fff; }
+.text-black { color: #000; }
+.text-peeper-purple { color: var(--peeper-purple); }
+.text-peeper-green { color: var(--peeper-green); }
+.bg-white { background-color: #fff; }
+.bg-black { background-color: #000; }
+.bg-peeper-purple { background-color: var(--peeper-purple); }
+.bg-peeper-green { background-color: var(--peeper-green); }
+
+/* Borders & Shadows */
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-full { border-radius: 9999px; }
+.border { border: 1px solid #e5e7eb; }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+/* Typography Helpers */
+.h1-responsive {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.15;
+}
+.h2-responsive {
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.2;
+}
+
+/* Margin Bottom Helpers */
+.mb-16 { margin-bottom: 4rem; }
+.mb-20 { margin-bottom: 5rem; }
+
+/* Backgrounds */
+.bg-f9 { background-color: #f9f8f6; }
+
+/* Custom ECB Classes from Demo */
+.ecb-section-title { margin-bottom: 2rem; }
+.ecb-feature-item { padding: 1.5rem; border-radius: 1rem; }

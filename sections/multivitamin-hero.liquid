@@ -1,0 +1,200 @@
+{% schema %}
+{
+  "name": "Multivitamin Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Tagline",
+      "default": "ADVANCED MULTIVITAMIN FOR ADULTS"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Healthier body and mind with multivitamin"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Text",
+      "default": "<p>Take control of your health with plant-based ingredients & protein.</p>"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_label",
+      "label": "Button Label",
+      "default": "SHOP VITAMIN"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#F9F8F3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multivitamin Hero"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="ecb-hero-section" style="background-color: {{ section.settings.background_color }};">
+  <div class="page-width">
+    <div class="hero-flex-container">
+      
+      <!-- Text Content -->
+      <div class="hero-content-col">
+        <div class="hero-text-wrapper">
+          {% if section.settings.eyebrow != blank %}
+            <p class="hero-tagline">{{ section.settings.eyebrow }}</p>
+          {% endif %}
+          
+          {% if section.settings.heading != blank %}
+            <h1 class="hero-title">{{ section.settings.heading }}</h1>
+          {% endif %}
+          
+          {% if section.settings.description != blank %}
+            <div class="hero-description">
+              {{ section.settings.description }}
+            </div>
+          {% endif %}
+          
+          {% if section.settings.primary_button_label != blank %}
+            <div class="hero-actions">
+              <a href="{{ section.settings.primary_button_link | default: '#' }}" class="hero-btn">
+                {{ section.settings.primary_button_label }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Image Content -->
+      <div class="hero-image-col">
+        <div class="hero-image-wrapper">
+          {% if section.settings.image != blank %}
+            {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy' }}
+          {% else %}
+            <img src="{{ 'multivitamin_hero.png' | asset_url }}" alt="Hero" width="600" height="600" loading="lazy">
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .ecb-hero-section {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 20px;
+  }
+  .ecb-hero-section .hero-flex-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  .ecb-hero-section .hero-content-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .ecb-hero-section .hero-image-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ecb-hero-section .hero-tagline {
+    font-size: 14px;
+    font-weight: 600;
+    color: #7a7a7a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  .ecb-hero-section .hero-title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin: 0 0 24px 0;
+  }
+  .ecb-hero-section .hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4A4A4A;
+    margin-bottom: 40px;
+    max-width: 500px;
+  }
+
+  .ecb-hero-section .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 18px 48px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  .ecb-hero-section .hero-btn:hover {
+    opacity: 0.8;
+  }
+
+  .ecb-hero-section .hero-image-wrapper {
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.6s ease;
+  }
+  .ecb-hero-section .hero-image-wrapper:hover {
+    transform: scale(1.02);
+  }
+  .ecb-hero-section .hero-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media screen and (max-width: 959px) {
+    .ecb-hero-section {
+      padding: 80px 0;
+    }
+    .ecb-hero-section .hero-flex-container {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+    }
+    .ecb-hero-section .hero-content-col,
+    .ecb-hero-section .hero-image-col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .ecb-hero-section .hero-title {
+      font-size: 36px;
+    }
+    .ecb-hero-section .hero-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>

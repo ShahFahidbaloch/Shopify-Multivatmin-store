@@ -1,0 +1,22 @@
+{%- liquid
+  assign val = value | downcase
+-%}
+{%- if val == 'check' -%}
+  <svg class="comp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="10" stroke="#7FC59D" stroke-width="2"/>
+    <path d="M8 12L11 15L16 9" stroke="#7FC59D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+{%- elsif val == 'cross' -%}
+  <svg class="comp-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="10" stroke="#E58D8D" stroke-width="2"/>
+    <path d="M9 9L15 15M15 9L9 15" stroke="#E58D8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+{%- else -%}
+  {{ value }}
+{%- endif -%}
+<style>
+  .comp-icon {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
